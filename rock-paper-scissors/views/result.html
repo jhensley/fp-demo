@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+  <style>
+    body {
+      padding: 20px;
+    }
+    .pure-g {
+      letter-spacing: normal;
+    }
+  </style>
+</head>
+<body>
+    <div class="pure-g">
+        <div class="pure-1-1">
+          {{#if tie}}
+            <h1>It's a TIE!</h1>
+            <p>Player chose {{ playerChoice }}, and computer chose {{ computerChoice }}
+          {{else}}
+            <h1>Winner: {{ winner }}</h1>
+            <p>{{ winner }} beat {{ loser }}'s {{ losingChoice }} with {{ winningChoice }}
+          {{/if}}
+        </div>
+    </div>
+</body>
+</html>
